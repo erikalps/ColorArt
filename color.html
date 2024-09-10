@@ -20,23 +20,24 @@
           
           <nav id="nav-bar"> <!--barra de navegacao-->
             <ul id="list">
-                <li>
-                    <a href="#acrylic_paint"> Acrylic Paint</a>
+                <li >
+                    <a  class="nav-link" href="#acrylic_paint"> Acrylic Paint</a>
+                </li>
+                <li >
+                    <a class="nav-link" href="#watercolor_paint">Watercolor Paint</a>
                 </li>
                 <li>
-                    <a href="#watercolor_paint">Watercolor Paint</a>
-                </li>
-                <li>
-                    <a href="#oil_paint">Oil Paint</a>
+                    <a class="nav-link" href="#oil_paint">Oil Paint</a>
                 </li>
             </ul>
             
            </nav>
-           <form id="form"> <!--campo de insercao do email-->
+           <form id="form" action="https://www.freecodecamp.com/email-submit"> <!--campo de insercao do email-->
           
                <label for="email" name="email">your Email adress:</label>
-                <input id="email" type="email" placeholder=" task your email adress...">
-           </form>
+                <input name="email" id="email" type="email" placeholder=" task your email adress...">
+                <input id="submit" type="submit">
+            </form>
         
         
         </header>
@@ -65,18 +66,21 @@
         <section id="products">
            
             <div class="items" id="acrylic_paint">
-             <h4>ACRYLIC PAINT</h4>
+                <div class="paint">ACRYLIC PAINT</div>
              <p>R$150,00</p>
+             <button>SELECT</button>
            </div>
           
              <div  class="items" id="watercolor_paint">
-                <h4>WATERCOLOR PAINT</h4>
+                <div class="paint">WATERCOLOR PAINT</div>
                 <p>R$100,00</p>
+                <button>SELECT</button>
              </div>
              
              <div class="items" id="oil_paint">
-                <h4>OIL PAINT</h4>
+                <div class="paint">OIL PAINT</div>
                 <p>R$200,00</p>
+                <button>SELECT</button>
              </div>
            
 

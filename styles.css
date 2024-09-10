@@ -1,11 +1,15 @@
 *{
     padding:0;
     margin: 0;
+    box-sizing: border-box;
 }
 #Colorart{
    background-color: #FFE4C4;
-   border: solid 1px #000;
-   margin:100px;
+   border: solid 1px #FF6347;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 80%; /* Controla a largura máxima */
+   padding: 50px;
 }
 #header-img{
     height: 250px;
@@ -18,26 +22,41 @@
 #title{
     text-align: center;
     font-family:sans-serif;
-    text-shadow: 2px 2px 5px #808080;
+    text-shadow: 2px 2px 5px #D2B48C;
     font-size: 3.5em;
+    color: #FF6347;
     
 }
 
  #list{
     display: flex;
+    justify-content: flex-start;
     list-style-type: none;
-    margin-left: 70%;
-    margin-top: 15px;
-    gap: 20px;
-    
+    margin-top: 20px;
+    padding: 8px;
+    gap: 30px;
+    background-color: #98FF98;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-#list a{
+
+      
+
+#list .nav-link{
     text-decoration: none;
-    color: #FF6347;
-    font-weight: bold;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    font-weight: 500;
+    color: #333;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+#list li{
+    transition: transform 0.3s ease;
+}
+
+#list li:hover{
+    transform: scale(1.1);
 }
 
 #form{
@@ -47,21 +66,26 @@
     justify-content: center;
     margin-top: 30px;
     gap:10px;
-    margin-bottom: 20px;
+  
     
 }
 #form label{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #FF6347;
     font-weight: bold;
+    font-size: 1.09rem;
+    
     
 }
-#form input{
-    width: 30%;
-    height: 25px;
-    margin-top:20px;
-    
-}
+
+ #form input {
+        width: 100%;
+        max-width: 400px; 
+        height: 25px;
+        margin-top: 20px;    
+ }
+     
+
 #container_video{
     display: flex;
     align-items: center;
@@ -73,40 +97,133 @@
 }
 
 #video{
-    border: solid 2px #FF6347;
+    border: solid 5px #FF6347;
 }
-#icons{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 50px;
-    margin-left:30px;
-    margin-bottom:20px;
+
+#icons {
+    padding: 20px;
+   
+}
+
+
+.benefits h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.benefits {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #98FF98;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     
 }
 
-.benefits h4{
-    color: #FF6347;
-    font-weight: bold;
+.benefits:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 #products{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top:60px;
-    margin-right:50px;
-    margin-left:50px;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     
+   
 }
 
  #products .items{
+    border: 1px solid #FF6347;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 10px;
-    border: solid 1px #000;
-    height: 250px;
-    width: 300px;
+    border-radius: 3px;
+    width: calc(100% / 5);  
+    height: 300px;
+    background-color: #FAF0E6;
 
 
 }
 
+#products .paint{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    font-weight: bold;
+    
+
+}
+#products p{
+    margin-top: 20px;
+    font-size: 1.5em;
+    
+}
+
+#products button{
+    margin-top: 50%;
+    margin-bottom: 50%;
+    width: 80%;
+    height: 10%;
+    background-color: #FF6347;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+:hover button{
+    cursor: pointer;
+       
+}
+
+
+@media (max-width: 667px) {
+    #header-img {
+      margin-top: 10px;
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(1.1) contrast(1.2) saturate(1.5);
+
+    }
+
+    #header #title{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #video{
+        width: 250px;
+        height: 250px;
+    }
+
+    #icons h4{
+       font-weight: 500;
+       font-size: 0.9em;
+      
+       
+    }
+
+    #products .items{
+        width: 100%;
+        margin:auto;
+       
+    }
+
+    #list li {
+    display: flex;
+    overflow:hidden;
+    font-weight: bold;
+    
+  }
+  #list{
+    font-size: 0.7rem;
+    
+  }
+}
